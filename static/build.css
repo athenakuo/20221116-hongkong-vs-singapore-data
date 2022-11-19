@@ -285,7 +285,7 @@ html {
 body {
     min-width: 320px;
     min-height: 100%;
-    color: #ffdcaf;
+    color: #2e4353;
     line-height: 1.4;
     background-color: #080808;
     font-family: Helvetica Neue, Helvetica, PingFang SC, Lantinghei SC, Arial, sans-serif;
@@ -308,17 +308,16 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 600;
+    font-family: 'Noto Sans TC', sans-serif;
     margin: 1em 0
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2em
 }
 
 h2 {
-    font-size: 1.7em;
-    color: #fff;
+    font-size: 1.5em
 }
 
 h3 {
@@ -330,17 +329,15 @@ h4 {
 }
 
 h5 {
-    font-size: .83em;
-    color: #a37334
+    font-size: .83em
 }
 
 h6 {
-    font-size: .75em;
-    color: #a37334
+    font-size: .75em
 }
 
 p {
-    margin-bottom: 1.4em;
+    margin-bottom: 1.5em;
     text-align: justify;
     line-height: 1.6;
     font-weight: 400
@@ -350,6 +347,14 @@ p:target {
     position: relative;
     -webkit-animation: a 3s ease-in-out .7s;
     animation: a 3s ease-in-out .7s
+}
+
+p.link {
+    width: 90%;
+    margin: 1em auto;
+    color: #98a1a8;
+    font-size: 14px;
+    font-weight: 600
 }
 
 @-webkit-keyframes a {
@@ -399,7 +404,12 @@ a:active,
 a:hover,
 a:link,
 a:visited {
-    color: currentcolor
+    color: #2e4353;
+    font-weight: 600
+}
+
+a.emphasize {
+    background: #ffffff;
 }
 
 button {
@@ -499,9 +509,9 @@ button::-moz-focus-inner {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 10% 50%;
     position: relative;
-    color: #fff;
+    color: #fff
 }
 
 .cover,
@@ -527,18 +537,17 @@ button::-moz-focus-inner {
 }
 
 .cover__wrapper {
-    bottom: 5%;
-    left: -12%;
+    bottom: 40%;
+    left: -10%;
     position: relative;
     width: 100%;
-    max-width: 33%
+    max-width: 40%
 }
 
 .cover__title {
     margin: 0;
-    font-size: 2.4em;
-    font-family: Hoefler Text, Songti TC, serif;
-    /* text-shadow: 1.5px 1.5px #585858; */
+    font-size: 2.5em;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .cover__meta {
@@ -642,8 +651,7 @@ button::-moz-focus-inner {
 
 .article h2 {
     text-align: center;
-    overflow: hidden;
-    font-weight: 600;
+    overflow: hidden
 }
 
 .article h2:before {
@@ -651,7 +659,7 @@ button::-moz-focus-inner {
     display: block;
     width: 48px;
     margin: 40px auto;
-    border-top: 5px solid #a37334
+    border-top: 5px solid #1b2c33
 }
 
 .article h2:first-of-type {
@@ -662,12 +670,16 @@ button::-moz-focus-inner {
     margin-top: 2em
 }
 
+.flourish-embed flourish-table {
+    width: 80%;
+}
+
 .album {
     width: 80%;
     width: 80vw;
     max-width: 1080px;
     height: auto;
-    margin: 0 auto
+    margin: 20px auto
 }
 
 .album__item {
@@ -679,10 +691,9 @@ button::-moz-focus-inner {
 
 .album figcaption {
     margin-top: 2%;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    text-align: left;
-    color: #969696;
+    text-align: center
 }
 
 .album__image {
@@ -705,11 +716,11 @@ button::-moz-focus-inner {
 }
 
 .album__small {
-    width: 74%
+    width: 60%
 }
 
 .album__msmall {
-    width: 65%
+    width: 70%
 }
 
 .album__xsmall {
@@ -719,22 +730,22 @@ button::-moz-focus-inner {
 .album__thumb img {
     position: relative;
     width: 49%;
-    vertical-align: middle;
+    vertical-align: top
 }
 
 .album__thumb img:nth-child(odd) {
-    margin: 0 0 1% 1%
+    margin: 0 0 2% 1%
 }
 
 .album__thumb img:nth-child(2n) {
-    margin: 0 1% 1% 0
+    margin: 0 1% 2% 0
 }
 
 .credits {
     margin-top: 20px;
     padding: 20px;
     font-size: 14px;
-    color: #969696
+    color: #666
 }
 
 .credits table {
@@ -859,16 +870,10 @@ button::-moz-focus-inner {
         padding-right: 20px
     }
 
-    .cover__logo {
-        display: none
-    }
+    .cover__logo {}
 
     .cover__title {
-        font-size: 1.5em;
-    }
-
-    .cover__summary {
-        display: none
+        font-size: 1.8em
     }
 
     .cover__center .cover__title {
@@ -885,11 +890,21 @@ button::-moz-focus-inner {
     }
 
     .article {
+        padding: 0 2em
+    }
+
+
+
+    .album figcaption {
         padding: 0 1em
     }
 
-    .album figcaption {
-        padding: 0.7em
+    .album__small {
+        width: 90%
+    }
+
+    .album__msmall {
+        width: 90%
     }
 
     .jumper {
@@ -903,10 +918,10 @@ button::-moz-focus-inner {
 
 @media (max-width:1024px) and (orientation:portrait) {
     .cover__wrapper {
-        bottom: 7%;
+        bottom: 40%;
         left: 0;
-        max-width: 100%;
-        padding: 1.8em
+        max-width: 80%;
+        padding: 1.5em
     }
 
     .cover {
@@ -924,8 +939,8 @@ button::-moz-focus-inner {
     .cover__wrapper {
         top: 0;
         left: 0;
-        max-width: 100%;
-        padding: 1em
+        max-width: 80%;
+        padding: 1.5em
     }
 
     .album {
