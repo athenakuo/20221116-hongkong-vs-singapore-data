@@ -285,7 +285,7 @@ html {
 body {
     min-width: 320px;
     min-height: 100%;
-    color: #2e4353;
+    color: #ffdcaf;
     line-height: 1.4;
     background-color: #080808;
     font-family: Helvetica Neue, Helvetica, PingFang SC, Lantinghei SC, Arial, sans-serif;
@@ -308,16 +308,17 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 600;
     margin: 1em 0
 }
 
 h1 {
-    font-size: 2em
+    font-size: 2em;
 }
 
 h2 {
-    font-size: 1.5em
+    font-size: 1.7em;
+    color: #fff;
 }
 
 h3 {
@@ -329,15 +330,17 @@ h4 {
 }
 
 h5 {
-    font-size: .83em
+    font-size: .83em;
+    color: #a37334
 }
 
 h6 {
-    font-size: .75em
+    font-size: .75em;
+    color: #a37334
 }
 
 p {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.4em;
     text-align: justify;
     line-height: 1.6;
     font-weight: 400
@@ -347,14 +350,6 @@ p:target {
     position: relative;
     -webkit-animation: a 3s ease-in-out .7s;
     animation: a 3s ease-in-out .7s
-}
-
-p.link {
-    width: 90%;
-    margin: 1em auto;
-    color: #98a1a8;
-    font-size: 14px;
-    font-weight: 600
 }
 
 @-webkit-keyframes a {
@@ -404,8 +399,7 @@ a:active,
 a:hover,
 a:link,
 a:visited {
-    color: #2e4353;
-    font-weight: 600
+    color: currentcolor
 }
 
 button {
@@ -505,9 +499,9 @@ button::-moz-focus-inner {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 10% 50%;
+    background-position: 50% 50%;
     position: relative;
-    color: #fff
+    color: #fff;
 }
 
 .cover,
@@ -533,17 +527,18 @@ button::-moz-focus-inner {
 }
 
 .cover__wrapper {
-    bottom: 40%;
-    left: -10%;
+    bottom: 5%;
+    left: -12%;
     position: relative;
     width: 100%;
-    max-width: 40%
+    max-width: 33%
 }
 
 .cover__title {
     margin: 0;
-    font-size: 2.5em;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2.4em;
+    font-family: Hoefler Text, Songti TC, serif;
+    /* text-shadow: 1.5px 1.5px #585858; */
 }
 
 .cover__meta {
@@ -647,15 +642,16 @@ button::-moz-focus-inner {
 
 .article h2 {
     text-align: center;
-    overflow: hidden
+    overflow: hidden;
+    font-weight: 600;
 }
 
-.article h2:after {
+.article h2:before {
     content: "";
     display: block;
     width: 48px;
     margin: 40px auto;
-    border-top: 5px solid #1b2c33
+    border-top: 5px solid #a37334
 }
 
 .article h2:first-of-type {
@@ -666,16 +662,12 @@ button::-moz-focus-inner {
     margin-top: 2em
 }
 
-.flourish-embed flourish-table {
-    width: 80%;
-}
-
 .album {
     width: 80%;
     width: 80vw;
     max-width: 1080px;
     height: auto;
-    margin: 20px auto
+    margin: 0 auto
 }
 
 .album__item {
@@ -687,9 +679,10 @@ button::-moz-focus-inner {
 
 .album figcaption {
     margin-top: 2%;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    text-align: center
+    text-align: left;
+    color: #969696;
 }
 
 .album__image {
@@ -712,11 +705,11 @@ button::-moz-focus-inner {
 }
 
 .album__small {
-    width: 60%
+    width: 74%
 }
 
 .album__msmall {
-    width: 70%
+    width: 65%
 }
 
 .album__xsmall {
@@ -726,22 +719,22 @@ button::-moz-focus-inner {
 .album__thumb img {
     position: relative;
     width: 49%;
-    vertical-align: top
+    vertical-align: middle;
 }
 
 .album__thumb img:nth-child(odd) {
-    margin: 0 0 2% 1%
+    margin: 0 0 1% 1%
 }
 
 .album__thumb img:nth-child(2n) {
-    margin: 0 1% 2% 0
+    margin: 0 1% 1% 0
 }
 
 .credits {
     margin-top: 20px;
     padding: 20px;
     font-size: 14px;
-    color: #666
+    color: #969696
 }
 
 .credits table {
@@ -866,10 +859,16 @@ button::-moz-focus-inner {
         padding-right: 20px
     }
 
-    .cover__logo {}
+    .cover__logo {
+        display: none
+    }
 
     .cover__title {
-        font-size: 1.8em
+        font-size: 1.5em;
+    }
+
+    .cover__summary {
+        display: none
     }
 
     .cover__center .cover__title {
@@ -886,21 +885,11 @@ button::-moz-focus-inner {
     }
 
     .article {
-        padding: 0 2em
-    }
-
-
-
-    .album figcaption {
         padding: 0 1em
     }
 
-    .album__small {
-        width: 90%
-    }
-
-    .album__msmall {
-        width: 90%
+    .album figcaption {
+        padding: 0.7em
     }
 
     .jumper {
@@ -914,10 +903,10 @@ button::-moz-focus-inner {
 
 @media (max-width:1024px) and (orientation:portrait) {
     .cover__wrapper {
-        bottom: 40%;
+        bottom: 7%;
         left: 0;
-        max-width: 90%;
-        padding: 1.5em
+        max-width: 100%;
+        padding: 1.8em
     }
 
     .cover {
@@ -936,7 +925,7 @@ button::-moz-focus-inner {
         top: 0;
         left: 0;
         max-width: 100%;
-        padding: 1.5em
+        padding: 1em
     }
 
     .album {
@@ -953,54 +942,4 @@ button::-moz-focus-inner {
     .jumps a+a {
         margin-left: 0
     }
-}
-
-.support {
-    background-color: var(--backgroundColor);
-    color: var(--fontColor);
-    padding: 15px 0;
-}
-
-.support .container {
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.support h5,
-.support h6 {
-    margin: 0;
-    line-height: 1.4em;
-}
-
-.support h5 {
-    font-weight: 900;
-    font-size: 22px;
-}
-
-.support h6 {
-    font-weight: 400;
-    font-size: 17px;
-}
-
-.support a {
-    font-size: 17px;
-    font-weight: 900;
-    line-height: 28px;
-    display: inline-block;
-    border-radius: 20px;
-    color: var(--fontColor);
-    background-color: var(--buttonColor);
-    padding: 4px 30px;
-    text-decoration: none !important;
-    transition: filter .3s ease;
-}
-
-.support a:hover {
-    filter: brightness(0.9);
 }
